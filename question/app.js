@@ -1,12 +1,12 @@
 // Q1 変数
-let nickname = 'かなほ';
-let age = '27'
+const nickname = 'かなほ';
+const age = '27'
 
 console.log('私のニックネームは'+nickname+'です。'+'年齢は'+age+'歳です。');
 
 // Q2 配列
-let languages = ['JavaScript', 'PHP', 'Ruby', 'Python', 'Go'];
-let languagesText = `私の好きな言語は${languages[0]}です。
+const languages = ['JavaScript', 'PHP', 'Ruby', 'Python', 'Go'];
+const languagesText = `私の好きな言語は${languages[0]}です。
 次は${languages[3]}を勉強してみたいです。`
 
 console.log(languagesText);
@@ -43,8 +43,8 @@ let playerList = [
 console.log(playerList[1].favorites[1]);
 
 // Q5 四則演算
-let ageSum = playerList[0].age + playerList[1].age + playerList[2].age;
-let ageAverage = ageSum / playerList.length;
+const ageSum = playerList[0].age + playerList[1].age + playerList[2].age;
+const ageAverage = ageSum / playerList.length;
 console.log(ageAverage);
 
 // Q6 関数
@@ -54,7 +54,7 @@ function sayHello() {
 
 sayHello();
 
-let sayWorld = function(){
+const sayWorld = function(){
   return('World');
 };
 
@@ -82,36 +82,32 @@ console.log(user.sayHello());
 let calc = {};
 
 calc.add = function(x, y) {
-  let add = x + y;
-  return add;
+  return x + y;
 }; //addメソッドを定義
 
 console.log(calc.add(2,5)); //2+5を計算
 
 calc.subtract = function(x, y) {
-  let subtract = x - y;
-  return subtract;
+  return x - y;
 };
 
 console.log(calc.subtract(20,10));
 
 calc.multiply = function(x, y) {
-  let multiply = x * y;
-  return multiply;
+  return x * y;
 };
 
 console.log(calc.multiply(7,7));
 
 calc.divide = function(x, y) {
-  let divide = x / y;
-  return divide;
+  return x / y;
 };
 
 console.log(calc.divide(15,3));
 
 // Q9 返り値
 function remainder(x, y) {
-  let result = x % y;
+  const result = x % y;
   return x + 'を' + y + 'で割った余りは' + result + 'です。';
 };
 
@@ -159,10 +155,10 @@ function main() {
 setTimeout(main, 3000);
 
 // Q3 if
-let num = -1;
+const num = -1;
 if (num > 0) {
   console.log('num is greater than 0');
-} else if (num == 0) {
+} else if (num === 0) {
   console.log('num is 0');
 } else if (num < 0) {
   console.log('num is less than 0')
@@ -184,7 +180,7 @@ for (let i = 0; i < mixed.length; i++) {
 
   let number = mixed[i];
 
-  if (typeof(number) == 'string'){
+  if (typeof(number) === 'string'){
     console.log(number+'is not number');
   } else {
     if (number % 2 === 0){
